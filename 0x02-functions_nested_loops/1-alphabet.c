@@ -2,10 +2,12 @@
 /**
  * print_alphabet - print all alphabet in lowercase
  */
-void print_alphabet(void) {
-  char letter = 'a';
+void print_alphabet(void) 
+{
+char letter = 'a';
   
-  while (letter <= 'z') {
+  while (letter <= 'z') 
+  {
     _putchar(letter);
     letter++;
   }
