@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * puts2 - function should print only one character out of two
+ * puts2 - function
  * @str: input
  */
 void puts2(char *str)
