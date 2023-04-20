@@ -17,7 +17,7 @@ va_start(nu, n);
 	{
 	printf("%d", va_arg(nu, int));
 
-	if (index != (n - 1) && separator != NULL)
+	if (i != (n - 1) && separator != NULL)
 	printf("%s", separator);
 	}
 
