@@ -1,9 +1,9 @@
-#include <stdio.h> 
+#include <stdio.h>
 #include "lists.h"
 /**
  * print_list - the function
  * @h: pointer
- * Return: s
+ * Return: count
  */
 size_t print_list(const list_t *h)
 {
