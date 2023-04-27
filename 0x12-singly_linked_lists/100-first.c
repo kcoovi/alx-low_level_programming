@@ -1,19 +1,11 @@
 #include <stdio.h>
+void first(void) __attribute__ ((constructor));
 
 /**
- * pre_main - function before main
+ * first - function
  */
-void __attribute__ ((constructor)) pre_main()
+void first(void)
 {
-	printf("You're beat! and yet, you must allow,\n"
-	"I bore my house upon my back!\n");
-}
-
-/**
- * main - main function
- * Return: 0
- */
-int main(void)
-{
-
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
