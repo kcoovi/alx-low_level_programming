@@ -3,6 +3,7 @@
 /**
  * print_list - the function
  * @h: pointer
+ *
  * Return: the number of nodes
  */
 size_t print_list(const list_t *h)
@@ -16,6 +17,5 @@ size_t print_list(const list_t *h)
 		else
 		printf("[%u] %s\n", h->len, h->str);
 	}
-
-return (count);
+	return (count);
 }
