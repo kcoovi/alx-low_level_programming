@@ -18,7 +18,7 @@ unsigned int len;
 	for (len = 0; str[len]; len++)
 	;
 
-	newnode = malloc(sizeof(list_t));
+	newNode = malloc(sizeof(list_t));
 	if (newNode == NULL)
 	return (NULL);
 
