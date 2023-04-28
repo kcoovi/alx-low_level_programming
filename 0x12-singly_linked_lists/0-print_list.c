@@ -3,9 +3,8 @@
 
 /**
  * print_list -the function
- * @h: pointer to the head
- *
- * Return: the number of nodes
+ * @h: pointer
+ * Return: c
  */
 size_t print_list(const list_t *h)
 {

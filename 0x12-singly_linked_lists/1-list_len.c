@@ -3,8 +3,7 @@
 
 /**
  * list_len - the function
- * @h: pointer to the head
- *
+ * @h: pointer
  * Return: c
  */
 size_t list_len(const list_t *h)
