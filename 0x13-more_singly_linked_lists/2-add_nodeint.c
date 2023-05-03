@@ -16,6 +16,5 @@ node = malloc(sizeof(listint_t));
 node->n = n;
 node->next = *head;
 *head = node;
-
 return (node);
 }
