@@ -7,15 +7,14 @@
 
 void print_binary(unsigned long int n)
 {
-unsigned long int binary;
-int a;
-int j = 0;
+int a, j = 0;
+unsigned long int b;
 
 	for (a = 63; a >= 0; a--)
 	{
-		binary = n >> a;
+		b = n >> a;
 
-		if (binary & 1)
+		if (b & 1)
 		{
 			_putchar('1');
 			j++;
