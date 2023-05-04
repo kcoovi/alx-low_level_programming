@@ -23,6 +23,6 @@ int j = 0;
 		else if (j)
 			_putchar('0');
 	}
-	if (j == 0)
+	if (!j)
 	_putchar(0);
 }
