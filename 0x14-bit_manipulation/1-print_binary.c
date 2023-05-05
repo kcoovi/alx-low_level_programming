@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stddef.h>
 /**
- * print_binary - 
- * @n: i
+ * print_binary - function
+ * @n: n
  */
 
 void print_binary(unsigned long int n)
@@ -19,7 +19,7 @@ int j = 0;
 			j++;
 		}
 		else if (j)
-		{	
+		{
 			_putchar('0');
 		}
 	}
