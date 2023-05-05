@@ -13,9 +13,7 @@ if (index > 63)
 return (-1);
 }
 
-unsigned long int bit_position = 1UL << index;
-
-*n != bit_position;
+*n = ((1UL << index) | *n);
 
 return (1);
 }
