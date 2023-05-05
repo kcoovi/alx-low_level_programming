@@ -20,7 +20,7 @@ unsigned long int b;
 			j++;
 		}
 		else if (j)
-			_putchar('0');
+		_putchar('0');
 	}
 	if (!j)
 	_putchar(0);
