@@ -5,7 +5,7 @@
 /**
  * read_textfile - function
  * @filename: file name
- * @letter: letters
+ * @letters: letters
  * Return: return
  */
 
