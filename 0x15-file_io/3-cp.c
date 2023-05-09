@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define BF_SIZE 1024
-
 /**
  * cp_file - copy file
  * @f_from: file from
@@ -13,7 +11,12 @@
 int cp_file(const char *f_from, const char *f_to)
 {
 	int fd_fr, fd_to, rd, wr;
-	char bu[BF_SIZE];
+	char *bf;
+	
+	bf = malloc(sizeof(char) * 1024);
+
+	if (bf == NULL)
+	return (-1);
 
 	fd_fr = open(f_from, O_RDONLY);
 	if (fd_fr == -1)
@@ -23,9 +26,9 @@ int cp_file(const char *f_from, const char *f_to)
 	if (fd_to == -1)
 	return (-1);
 
-	while ((rd = read(fd_fr, bu, BF_SIZE)) > 0)
+	while ((rd = read(fd_fr, bf, 1024)) > 0)
 	{
-	wr = write(fd_to, bu, rd);
+	wr = write(fd_to, bf, rd);
 	if (wr != rd)
 	return (-1);
 	}
