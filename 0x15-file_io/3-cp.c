@@ -12,7 +12,7 @@ int cp_file(const char *f_from, const char *f_to)
 {
 	int fd_fr, fd_to, rd, wr;
 	char *bf;
-	
+
 	bf = malloc(sizeof(char) * 1024);
 
 	if (bf == NULL)
