@@ -2,51 +2,43 @@
 
 /**
  * insert_dnodeint_at_index - function
- * @h: head
+ * @h: pointer
  * @idx: index
  * @n: data
  * Return: address
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-dlistint_t *new;
-dlistint_t *head;
-unsigned int i;
+dlistint_t *new_node, *temp = *h;
+unsigned int i = 0;
 
-new = NULL;
+if (h == NULL)
+return (NULL);
+
 if (idx == 0)
-new = add_dnodeint(h, n);
-else
+return (add_dnodeint(h, n));
+
+while (temp && i < idx)
 {
-head = *h;
-i = 1;
-if (head != NULL)
-while (head->prev != NULL)
-head = head->prev;
-while (head != NULL)
-{
-if (i == idx)
-{
-if (head->next == NULL)
-new = add_dnodeint_end(h, n);
-else
-{
-new = malloc(sizeof(dlistint_t));
-if (new != NULL)
-{
-new->n = n;
-new->next = head->next;
-new->prev = head;
-head->next->prev = new;
-head->next = new;
-}
-}
-break;
-}
-head = head->next;
+temp = temp->next;
 i++;
 }
-}
 
-return (new);
+if (!temp && i == idx)
+return (add_dnodeint_end(h, n));
+
+if (i != idx)
+return (NULL);
+
+new_node = malloc(sizeof(dlistint_t));
+if (!new_node)
+return (NULL);
+
+new_node->n = n;
+new_node->prev = temp->prev;
+new_node->next = temp;
+temp->prev->next = new_node;
+temp->prev = new_node;
+
+return (new_node);
 }
