@@ -1,19 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include "main.h"
-/**
- * get_win_numbers - Get the winning numbers
- * @numbers: the numbers
- */
-void get_win_numbers(int *numbers)
-{
-    
-numbers[0] = 9;
-numbers[1] = 8;
-numbers[2] = 10;
-numbers[3] = 24;
-numbers[4] = 75;
-numbers[5] = 9;
+#include <unistd.h>
+#include <string.h>
 
+int rand()
+{
+	static int ct = -1;
+
+	ct++;
+	if (ct == 0)
+		return 8;
+	if (ct == 1)
+		return 8;
+	if (ct == 2)
+		return 7;
+	if (ct == 3)
+		return 9;
+	if (ct == 4)
+		return 23;
+	if (ct == 5)
+		return 74;
+	return ct * ct % 30000;
 }
