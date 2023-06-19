@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include "main.h"
+/**
+ * get_win_numbers - Get numbers
+ * @numbers: numbers
+ */
 void get_win_numbers(int *numbers)
 {
 numbers[0] = 9;
